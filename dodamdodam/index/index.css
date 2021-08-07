@@ -1,0 +1,23 @@
+
+body {
+    background-color: #EEF8F3;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+}
+
+.dodo {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    padding: 8% 0% 0% 30%;
+}
+
+.start {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    padding: 36% 0% 0% 40%;
+}
+    

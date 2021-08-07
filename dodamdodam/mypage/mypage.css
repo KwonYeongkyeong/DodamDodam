@@ -1,0 +1,126 @@
+body {
+    background-color: #EEF8F3;
+}
+
+
+#information{
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vw;
+    text-align: left;
+    line-height: 2.5vw;
+
+    position: absolute;
+
+    top: 13%;
+    left: 40%;
+
+}
+
+#home {
+    position: absolute;
+    width: 12%;
+    height: 7%;
+    right: 13%;
+    top: 7%;
+
+    background-color: #818181;
+    color: white;
+    border-radius: 5vw;
+    
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vw;
+    text-align: center;
+    line-height: 2.5vw;
+
+    }
+    
+#home:hover {
+    color:white;
+    background-color: black;
+    }
+
+.lion {
+    position: absolute;
+    width: 19%;
+    height: auto;
+    left: 16%;
+    top: 10%;
+}
+
+#box1 {
+
+    position: absolute;
+    width: 22%;
+    height: 39%;
+    left: 15.9%;
+    top: 55%;
+    
+    background: #6CB896;
+    border-radius: 1vw;
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    }
+
+#box1:hover{
+    background-color: #18744c;
+}
+
+#box2 {
+
+    position: absolute;
+    width: 22%;
+    height: 39%;
+    left: 40%;
+    top: 55%;
+    
+    background: #6CB896;
+    border-radius: 1vw;
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    }
+
+#box2:hover{
+    background-color: #18744c;
+}
+#box3 {
+
+    position: absolute;
+    width: 22%;
+    height: 39%;
+    left: 64.1%;
+    top: 55%;
+    
+    background: #6CB896;
+    border-radius: 1vw;
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+    
+    color: #FFFFFF;
+    }
+
+#box3:hover{
+    background-color: #18744c;
+}

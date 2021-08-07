@@ -1,0 +1,171 @@
+body {
+    background: url('배경화면.png') no-repeat center center fixed;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.mong {
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    height: auto;
+    min-width: 20%;
+    margin: auto;
+    padding-top: 15%;
+}
+
+#before {
+
+    
+    position: absolute;
+    width: 10%;
+    height: 8.5%;
+    left: -1%;
+    top: 80%;
+    
+    background-color: rgba(239, 106, 106, 0.96);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0vw 1.5vw 1.5vw 0vw;
+
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1vw;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+#before:hover {
+    background-color: rgba(116, 51, 51, 0.96);
+}
+    
+
+#next {
+
+   
+    position: absolute;
+    width: 10%;
+    height: 8.5%;
+    right: 0%;
+    top: 80%;
+   
+    background-color: #2FD98E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5vw 0vw 0vw 1.5vw;
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1vw;
+    text-align: center;
+    
+   
+   color: #FFFFFF;
+
+
+} 
+
+#next:hover{
+    background-color: #18744c;
+}
+
+.mike {
+    position: absolute;
+    width: auto;
+    height: 10%;
+    left: 48%;
+    top: 8%;
+    color:#2CA56F;
+}
+
+.step1 {
+    position: fixed;
+    left: 6%;
+    top: 18%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+
+    color: #818181;
+}
+
+#sound {
+    /* Rectangle 3 */
+
+position: absolute;
+width: 20%;
+height: 13%;
+left: 5%;
+top: 25%;
+
+background: #CDEEE5;
+border-radius: 2vw;
+
+}
+
+.sound {
+    position: absolute;
+width: 4%;
+height: 13%;
+left: 13%;
+top: 25%;
+color:#2CA56F;
+}
+
+
+.box {
+    position: absolute;
+    width: 23%;
+    height: 17%;
+    left: 70%;
+    top: 22%;
+
+    background: #aeddd1;
+    box-sizing: border-box;
+    border-radius: 2vw;
+}
+
+.mention {
+    position: absolute;
+    left: 13%;
+    top: 8.5%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+
+    font-size: 1.4vw;
+    text-align: center;
+    line-height: 1.7vw;
+
+    color: #818181;
+}
+
+.listen {
+
+position: absolute;
+width: 42.5%;
+height: 33%;
+left: 29.5%;
+top: 17%;
+
+font-family: SeoulNamsanM;
+font-style: normal;
+font-weight: bold;
+font-size: 120%;
+text-align: center;
+
+color: #2CA56F;
+
+}

@@ -1,0 +1,91 @@
+
+
+body {
+    background: url('배경화면.png') no-repeat center center fixed;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.lastmong {
+
+    position: absolute;
+    width: 25%;
+    min-width: 40px;
+    height: auto;
+    top: 15%;
+    left: 10%;
+    object-fit: cover;
+}
+
+.box {
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    top: 20%;
+    left: 40%;
+  
+    background: #EEF8F3;
+    border: 0.5vw solid rgba(108, 184, 150, 0.49);
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+.mention1 {
+    position: absolute;
+    left: 50%;
+    top: 27%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vw;
+    text-align: center;
+
+    color: #3B6955;
+}
+
+.mention2{
+    position: absolute;
+    left: 55%;
+    top: 40%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.0vw;
+    line-height: 3vw;
+    text-align: center;
+
+    color: #3B6955;
+}
+
+#check {
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    left: 60%;
+    top: 73%;
+
+    background-color: #818181;
+    color: white;
+    border-radius: 5vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6vw;
+    text-align: center;
+
+}
+
+#check:hover {
+    color:white;
+    background-color: black;
+}
