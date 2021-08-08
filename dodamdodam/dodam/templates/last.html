@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'last.css' %}">
+    <title>Dodam last</title>
+    <style>
+        @font-face {
+        font-family: 'SeoulNamsanM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+    </style>
+</head>
+<body>
+    <img src="{% static '코코몽.png' %}" alt="코코몽" class="lastmong">
+
+    <div class="box"></div>
+    <p class="mention1">코코몽과의 대화가 끝이 났어요! </p><br>
+    <p class="mention2">다음에 또 만나요 :)<br><br>
+        코코몽이 집에 가기 위해서<br>
+        부모님을 불러 주세요!</p>
+    <a href="{% url 'dodam_app:mypage' %}"><button id="check">결과 확인</button></a>
+    </table>
+
+</body>
+</html>
