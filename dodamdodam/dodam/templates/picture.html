@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="{%static 'picture.css' %}">
     <title>Dodam picture</title>
     <style>
@@ -17,29 +20,66 @@
 </head>
 <body>
     <img src="{%static '코코몽.png' %}" alt="코코몽" class="mong">
-    <rect class="box" alt="사각형"></rect>
     <p class="mention1">Step 3.</p> 
     <p class="mention2">도담이에게 그림을 선물해 주세요!</p>
     <a href="{% url 'dodam_app:voice' %}"><button id="before">이전상담</button></a>
     <a href="{% url 'dodam_app:last' %}"><button id="next">다음상담</button></a>
-    <div id="color">
-        <button id="red">빨강</button>
-        <button id="pink">분홍</button>
-        <button id="orange">주황</button>
-        <button id="yellow">노랑</button>
-        <button id="lightgreen">연두</button>
-        <button id="green">초록</button>
-        <button id="skyblue">하늘</button>
-        <button id="blue">파랑</button>
-        <button id="navy">남색</button>
-        <button id="purple">보라</button>
-        <button id="white">하양</button>
-        <button id="black">검정</button>
-        <button id="peach">살구</button>
+    
+    <canvas id="jsCanvas" class="canvas"></canvas>
+    <div class="controls">
+      <div class="controls__range">
+        <input
+          type="range"
+          id="jsRange"
+          min="0.1"
+          max="5"
+          value="2.5"
+          step="0.1"
+        />
+      </div>
+      <div class="controls__btns">
+        <button id="jsMode">Fill</button>
+        <button id="jsSave">Save</button>
+      </div>
+      <div class="controls__colors" id="jsColors">
+        <div
+          class="controls__color jsColor"
+          style="background-color:#2c2c2c"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:white"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#FF3B30"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#FF9500"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#FFCC00"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#4CD963"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#5AC8FA"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#0579FF"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color:#5856D6"
+        ></div>
+      </div>
     </div>
-    <div id="tool">
-        <img src="{%static '연필.png' %}" class="pencil">
-        <img src="{%static '지우개.png' %}" class="eraser">
-    </div>
+    <script src="{%static 'app.js' %}" type="text/javascript"></script>
 </body>
 </html>
