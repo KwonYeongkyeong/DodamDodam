@@ -54,10 +54,10 @@ function handleRangeChange(event) {
 function handleModeClick() {
   if (filling === true) {
     filling = false;
-    mode.innerText = "Fill";
+    mode.innerText = "채우기";
   } else {
     filling = true;
-    mode.innerText = "Paint";
+    mode.innerText = "그리기";
   }
 }
 
