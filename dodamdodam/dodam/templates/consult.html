@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'consult.css' %}">
+    <title>Dodam consult</title>
+    <style>
+        @font-face {
+        font-family: 'SeoulNamsanM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <p class="mention1">상담 시작 전</p><br><br>
+
+    <p class="mention2">안녕하세요<br>
+        아이와의 소중한 시간을 위해<br>
+        도담도담을 선택해 주셔서 감사합니다.<br><br>
+        아이의 솔직한 속마음을 알기 위한<br>
+        질문을 직접 입력할 수 있습니다!</p>
+
+    <a href="{% url 'dodam_app:setquest' %}"><button id="check">입력하기</button></a>
+
+</body>
+</html>

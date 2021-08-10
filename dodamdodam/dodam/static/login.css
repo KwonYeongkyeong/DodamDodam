@@ -1,0 +1,120 @@
+body {
+    background-color: #EEF8F3;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+}
+
+.dodo {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    padding: 5% 0% 0% 30%;
+}
+
+#idbox {
+    position: absolute;
+    width: 16%;
+    height: 6%;
+    left: 36%;
+    top: 67.5%;
+
+    background: #E5E5E5;
+    border-radius: 0.3vw;
+    
+}
+
+#pwbox {
+    position: absolute;
+    width: 16%;
+    height: 6%;
+    left: 36%;
+    top: 75%;
+
+    background: #E5E5E5;
+    border-radius: 0.3vw;
+}
+
+#idlet {
+
+    position: absolute;
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.5vw;
+
+    left: 36.9%;
+    top: 66.9%;
+}
+
+#pwlet {
+    position: absolute;
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.5vw;
+
+    left: 36.5%;
+    top: 74.5%;
+}
+
+#idput {
+    position: absolute;
+    width: 11%;
+    height: 3.8%;
+    left: 40%;
+    top: 69.8%;
+
+    background: #FFFFFF;
+    border-radius: 0.3vw;
+    border: none;
+    font-family: SeoulNamsanM;
+    font-size: 1vw;
+}
+
+#pwput {
+    position: absolute;
+    width: 11%;
+    height: 3.8%;
+    left: 40%;
+    top: 77.5%;
+
+    background: #FFFFFF;
+    border-radius: 0.3vw;
+    border: none;
+    font-family: SeoulNamsanM;
+    font-size: 1vw;
+}
+
+#check {
+    position: absolute;
+    width: 5%;
+    height: 13%;
+    left: 53%;
+    top: 69%;
+
+    background: #6CB896;
+    border-radius: 10px;
+    border: none;
+    font-family: SeoulNamsanM;
+    font-weight: bolder;
+    font-size: 1.3vw;
+    color: white;
+}
+
+#subt{
+
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    left: 43%;
+    top: 83%;
+
+    background-color: #EEF8F3;
+    font-family: SeoulNamsanM;
+    font-weight: bolder;
+    border: none;
+    font-size: 1.2vw;
+    color: #818181;
+}

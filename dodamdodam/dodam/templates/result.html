@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dodam</title>
+    <link rel="stylesheet" href="{%static 'result.css' %}">
+    <style>
+        @font-face {
+        font-family: 'SeoulNamsanM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="title">아이와 도담이의 대화</div>
+    <a href="{% url 'dodam_app:consult' %}"><button id="home">상담설정</button></a>
+    <a href="{% url 'dodam_app:mypage' %}"><button id="mypage">MyPage</button></a>
+    <div id="talk"></div>
+    <div id="diary"></div>
+    <div id="picture"></div>
+</body>
+
+</html>

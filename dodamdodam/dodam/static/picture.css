@@ -1,0 +1,179 @@
+@import "reset.css";
+body {
+    background: url('배경화면.png') no-repeat center center fixed;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.canvas {
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .controls .controls__btns {
+    margin-bottom: 10px;
+  }
+  
+  .controls__btns button {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+  }
+  
+  .controls__btns button:active {
+    transform: scale(0.98);
+  }
+  
+  .controls .controls__colors {
+    display: flex;
+  }
+  
+  .controls__colors .controls__color {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .controls .controls__range {
+    margin-bottom: 30px;
+  }
+  
+.mong {
+
+    position: absolute;
+    width: 17%;
+    height: auto;
+    top: 5%;
+    right: 7%;
+}
+
+.box{
+    position: absolute;
+    width: 52%;
+    height: 60%;
+    left: 21%;
+    top: 15%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
+}
+
+.mention1 {
+    position: absolute;
+    right: 54%;
+    top: 4%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7vw;
+    text-align: center;
+
+    color: #3B6955;
+}
+
+.mention2 {
+    position: absolute;
+    right: 30%;
+    top: 4%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7vw;
+    text-align: center;
+
+    color: #818181;
+}
+
+#before {
+
+    
+    position: absolute;
+    width: 10%;
+    height: 8.5%;
+    left: -1%;
+    top: 80%;
+    
+    background-color: rgba(239, 106, 106, 0.96);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0vw 1.5vw 1.5vw 0vw;
+
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+#before:hover {
+    background-color: rgba(116, 51, 51, 0.96);
+}
+    
+
+#next {
+
+   
+    position: absolute;
+    width: 10%;
+    height: 8.5%;
+    right: 0%;
+    top: 80%;
+   
+    background-color: #2FD98E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5vw 0vw 0vw 1.5vw;
+
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+    
+   
+   color: #FFFFFF;
+
+
+} 
+
+#next:hover{
+    background-color: #18744c;
+}

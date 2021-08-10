@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dodam</title>
+    <link rel="stylesheet" href="{%static 'setquest.css' %}">
+    <style>
+        @font-face {
+        font-family: 'SeoulNamsanM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="lgbox">
+        <rect id="line"></rect>
+        <p id="title">질문 설정</p>
+        
+        <form action="{% url 'setQ' %}" method="POST">
+            {% csrf_token %}
+            <rect id="box1"></rect>
+            <p id="q1">아이에게 어떤 질문을 하고 싶나요?</p>
+            <input type="text" placeholder="  첫 번째 질문을 작성해 보세요 (작성하지 않을 시 제공되는 기본 질문으로 설정)" id="ans1" name="ans1">
+            <input type="text" placeholder="  두 번째 질문을 작성해 보세요 (작성하지 않을 시 제공되는 기본 질문으로 설정)" id="ans2" name="ans2">
+            <input type="text" placeholder="  세 번째 질문을 작성해 보세요 (작성하지 않을 시 제공되는 기본 질문으로 설정)" id="ans3" name="ans3">
+
+            <rect id="box2"></rect>
+            <p id="q2">아이가 어떤 그림을 그리게 지시할까요?</p>
+            <input type="text" placeholder="  단어로 작성해 주세요 (작성하지 않을 시 제공되는 기본 단어: 집)" id="ans4" name="ans4">
+
+            <a href="#"><input type="submit" value="끝내기" id="check"></a>
+        </form>
+    </div>
+    
+</body>
+
+</html>

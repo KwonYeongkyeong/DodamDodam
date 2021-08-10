@@ -1,0 +1,95 @@
+body {
+    background-color: #EEF8F3;
+    min-height: 100%;
+
+    width: 100%;
+    height: auto;
+}
+
+#title {
+    position: absolute;
+    left: 38%;
+    top: 8%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 2.5vw;
+    text-align: center;
+
+    color: #6CB896;
+}
+
+#talk {
+    position: absolute;
+    width: 43%;
+    height: 73%;
+    left: 6%;
+    top: 20%;
+
+    background: white;
+    border: 1px solid #6CB896;
+    border-radius: 50px;
+}
+
+#diary {
+    position: absolute;
+    width: 43%;
+    height: 35%;
+    right: 6%;
+    top: 20%;
+
+    background: white;
+    border: 1px solid #6CB896;
+    border-radius: 50px;
+}
+
+#picture {
+    position: absolute;
+    width: 43%;
+    height: 35%;
+    right: 6%;
+    top: 58%;
+
+    background: white;
+    border: 1px solid #6CB896;
+    border-radius: 50px;
+}
+
+#home {
+    position: absolute;
+    width: 8%;
+    height: 7%;
+    left: 6%;
+    top: 7%;
+
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 50px;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+#mypage {
+    position: absolute;
+    width: 8%;
+    height: 7%;
+    right: 6%;
+    top: 7%;
+
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 50px;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    text-align: center;
+}

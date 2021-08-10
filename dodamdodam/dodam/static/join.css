@@ -1,0 +1,337 @@
+body {
+    background-color: #EEF8F3;
+}
+
+.box {
+    position: absolute;
+    height: 90%;
+    width: 50%;
+    top: 5%;
+    left: 25%;
+  
+    background: #ffffff;
+    border: 0.25vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+.mention1 {
+    position: absolute;
+    left: 47%;
+    top: 4%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+
+    color: #000000;
+}
+
+.line {
+    position: absolute;
+    height: 1%;
+    width: 50%;
+    top: 11%;
+    left: 25%;
+  
+    background: #ffffff;
+    border: 0.25vw solid rgba(108, 184, 150, 0.49);
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+.back {
+    position: absolute;
+    height: 70%;
+    width: 45%;
+    top: 12%;
+    left: 27.5%;
+  
+    background: #EEF8F3;
+
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+#box1 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 19%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box2 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 30%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box3 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 37%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box4 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 44%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box5 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 51%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box6 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 58%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box7 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 65%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+#box8 {
+    position: absolute;
+    height: 6%;
+    width: 12%;
+    top: 72%;
+    left: 30%;
+  
+    background: #ffffff;
+    border: 0.2vw solid rgba(108, 184, 150, 0.562);
+    box-sizing: border-box;
+    border-radius: 3vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+#write2 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 30%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write3 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 37%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write4 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 44%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write5 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 51%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write6 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 58%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write7 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 65%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+#write8 {
+    position: absolute;
+    height: 6%;
+    width: 28%;
+    top: 72%;
+    left: 42%;
+  
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+
+
+
+
+#check {
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    left: 45%;
+    top: 84%;
+
+    background-color: #818181;
+    color: white;
+    border-radius: 5vw;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+
+}
+
+#check:hover {
+    color:white;
+    background-color: black;
+}
+
+.profile {
+    position: absolute;
+    width: auto;
+    height: 12%;
+    left: 43%;
+    top: 16%;
+    
+    
+}
+
+#image {
+    position: absolute;
+    width: 7%;
+    height: 2.5%;
+    left: 50%;
+    top: 25.5%;
+
+    background-color: #818181;
+    color: white;
+    border-radius: 5vw;
+    
+}
