@@ -64,3 +64,5 @@ def picture(request):
     take = answer.objects
     return render(request, 'picture.html', {'take': take})
 
+def diary(request):
+    return render(request, "diary.html")

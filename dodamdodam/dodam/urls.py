@@ -12,5 +12,6 @@ urlpatterns= [
     path('setquest/', views.setquest,name='setquest'),
     path('join/',views.join,name='join'),
     path('home/',views.home,name="home"),
-    path('result/', views.result,name='result')
+    path('result/', views.result,name='result'),
+    path('diary/', views.diary, name="diary"),
 ]
