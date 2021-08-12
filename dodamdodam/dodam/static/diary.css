@@ -30,24 +30,52 @@ body {
     top:50%;
     z-index: 1;
 
-    width: 48%;
+    width: 52%;
     height: auto;
 }
 .cocomong {
    position: absolute;
-   left: 20%;
-   top: 10%;
+   left: 22%;
+   top: 13%;
 
    width: 16%;
    height: auto;
 }
-.text {
+/* .text {
     position: absolute;
     left: 25%;
     top: 5%;
 
     width: 25%;
     height: auto;
+} */
+
+.mention1 {
+    position: fixed;
+    left: 35%;
+    top: 7%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.6vw;
+    text-align: center;
+
+    color: #2CA56F;
+}
+
+.mention2 {
+    position: fixed;
+    left: 40%;
+    top: 7%;
+
+    font-family: SeoulNamsanM;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 1.6vw;
+    text-align: center;
+
+    color: #818181;
 }
 
 #before {
