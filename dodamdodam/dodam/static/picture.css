@@ -76,14 +76,14 @@ body {
   position: absolute;
   width: 17%;
   height: auto;
-  top: 5%;
+  bottom: 32%;
   right: 7%;
 }
 
 .mention1 {
   position: absolute;
   right: 54%;
-  top: 4%;
+  top: 3%;
 
   font-family: SeoulNamsanM;
   font-style: normal;
@@ -91,13 +91,14 @@ body {
   font-size: 1.4vw;
   text-align: center;
   line-height: 1.7vw;
-  color: #818181;
+  color: #2CA56F;
+  font-weight: bold;
 }
 
 .mention2 {
   position: absolute;
   right: 30%;
-  top: 4%;
+  top: 3%;
 
   font-family: SeoulNamsanM;
   font-style: normal;
