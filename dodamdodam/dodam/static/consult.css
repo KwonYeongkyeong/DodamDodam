@@ -54,6 +54,7 @@ body {
 }
 
 #check {
+    
     position: absolute;
     width: 10%;
     height: 7%;
@@ -63,6 +64,7 @@ body {
     background-color: #818181;
     color: white;
     border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0.2);
 
     font-family: SeoulNamsanM;
     font-style: normal;
