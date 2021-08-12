@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="{%static 'diary.css' %}">
     <title>도담도담</title>
 </head>
@@ -44,16 +43,16 @@
         <img src="{%static 'cow.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{%static 'horse.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">
     </div>
-    <div class="cocomong">
-        <img src="{%static 'cocomong.png' %}" alt="coco">
+    <div>
+        <img src="{%static 'cocomong.png' %}" alt="coco"  class="cocomong">
     </div>
-    <div class="text">
-        <img src="{%static 'text.png' %}" alt="text">
+    <div>
+        <img src="{%static 'text.png' %}" alt="text"  class="text">
     </div>
     <a href="{% url 'dodam_app:home' %}"><button id="before">이전상담</button></a>
     <a href="{% url 'dodam_app:picture' %}"><button id="next">다음상담</button></a>
-    <div class="DS">
-        <img src="{%static 'Dscreen.PNG' %}" alt="Dscreen" height="240" width="900">
+    <div>
+        <img src="{%static 'Dscreen.PNG' %}" alt="Dscreen" class="DS">
     </div>
     <script src="{%static 'move.js' %}" type="text/javascript"></script>
 </body>
