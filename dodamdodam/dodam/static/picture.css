@@ -1,4 +1,5 @@
 @import "reset.css";
+
 body {
   background: url('배경화면.png') no-repeat center center fixed;
   min-height: 100%;
@@ -76,30 +77,33 @@ body {
   position: absolute;
   width: 17%;
   height: auto;
-  top: 28%;
-  right: 13%;
+  bottom: 32%;
+  right: 7%;
 }
 
 .mention1 {
   position: absolute;
-  right: 57%;
-  top: 4%;
+  right: 54%;
+  top: 3%;
 
   font-family: SeoulNamsanM;
   font-style: normal;
-  font-weight: bolder;
   
   font-size: 1.4vw;
   text-align: center;
   line-height: 1.7vw;
+<<<<<<< HEAD
+  color: rgba(108, 184, 150, 0.49);
+=======
   color: #2CA56F;
-
+  font-weight: bold;
+>>>>>>> 352ed360905ea1088d3d085ca74f61767c45ef54
 }
 
 .mention2 {
   position: absolute;
-  right: 40%;
-  top: 4%;
+  right: 30%;
+  top: 3%;
 
   font-family: SeoulNamsanM;
   font-style: normal;
@@ -108,7 +112,6 @@ body {
   text-align: center;
   line-height: 1.7vw;
   color: #818181;
-  font-weight: bolder;
 
 }
 
