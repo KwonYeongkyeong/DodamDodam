@@ -28,11 +28,11 @@
     <form method="POST" action="{% url 'dodam_app:login' %}">
         {% csrf_token %}
         <!-- username: -->
-        <input name="username" type="text" value="" id="idbox" placeholder="  사용자이름">
+        <input name="username" type="text" value="" id="idbox" placeholder="    아이디">
         <br>
         <!-- Password: -->
         <br>
-        <input name="password" type="password" value="" id="pwbox" placeholder="  패스워드">
+        <input name="password" type="password" value="" id="pwbox" placeholder="    패스워드">
         <br>
         <br>
         <input name="button" type="submit" value="login" id="check">
