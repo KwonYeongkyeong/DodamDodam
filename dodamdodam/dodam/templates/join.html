@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="{%static 'join.css' %}">
     <style>
         @font-face {
-        font-family: 'SeoulNamsanM';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'SeoulNamsanM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="box"></div>
 
     <p class="mention1">회원가입</p>
@@ -25,7 +26,7 @@
 
     <div class="back"></div>
 
-    <button id="box1">프로필 사진</button>
+    <!-- <button id="box1">프로필 사진</button>
     <button id="box2">보호자 이름</button>
     <button id="box3">아이 이름</button>
     <button id="box4">보호자 연락처</button>
@@ -42,14 +43,34 @@
     <input type="text" name="write7" id="write7">
     <input type="text" name="write8" id="write8">
 
-    <a href="{% url 'login' %}"><button id="check">회원가입완료</button></a>
+    <a href="{% url 'login' %}"><button id="check">회원가입완료</button></a> -->
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="profile" viewBox="0 0 16 16">
-        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
-      </svg>
+    <form method="POST" action="{% url 'dodam_app:join' %}">
+        {% csrf_token %}
+        username:
+        <br>
+        <input name="username" type="text" value="">
+        <br>
+        Password:
+        <br>
+        <input name="password1" type="password1" value="">
+        <br>
+        Confirm Password:
+        <br>
+        <input name="password2" type="password2" value="">
+        <br>
+        <input name="button" type="submit" value="signup!">
+    </form>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="profile"
+        viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+        <path
+            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+    </svg>
 
     <button id="image">사진등록 및 변경</button>
 
 </body>
+
 </html>

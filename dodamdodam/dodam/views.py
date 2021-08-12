@@ -1,6 +1,12 @@
+from django.http import request
 from django.shortcuts import redirect, render
 from .models import answer
 
+from .static.stt import main
+from .static.tts import run_quickstart
+
+from django.contrib.auth.models import User
+from django.contrib import auth
 # Create your views here.
 
 def home(request):
@@ -25,10 +31,29 @@ def setquest(request):
     return render(request, "setquest.html")
 
 def join(request):
+    if request.method == "POST":
+        if request.POST["password1"] == request.POST["password2"]:
+            user = User.objects.create_user(
+                request.POST["username"], password=request.POST["password1"]
+            )
+            # auth.login(request, user)
+            return redirect("/dodam/login/")  # 뭐넣어야하는지 고민해보자
     return render(request, "join.html")
 
 def login(request):
-    return render(request, "login.html")
+    if request.method == "POST":
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = auth.authenticate(request, username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect("/dodam/consult/")
+        else:
+            return render(
+                request, "login.html", {"error": "username or password is incorrect"}
+            )
+    else:
+        return render(request, "login.html")
 
 def result(request):
     return render(request, "result.html")
@@ -66,3 +91,8 @@ def picture(request):
 
 def diary(request):
     return render(request, "diary.html")
+
+def record(request):
+    run_quickstart() #TTS
+    main() #STT
+    return render(request, "voice.html")

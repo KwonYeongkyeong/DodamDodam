@@ -14,4 +14,6 @@ urlpatterns= [
     path('home/',views.home,name="home"),
     path('result/', views.result,name='result'),
     path('diary/', views.diary, name="diary"),
+    path("record/", views.record, name="record"),
+    path("login/", views.login, name="login"),
 ]
