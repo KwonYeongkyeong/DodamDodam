@@ -22,7 +22,8 @@
   <a href="{% url 'dodam_app:home' %}"><button id="before">이전상담</button></a>
   <a href="{% url 'dodam_app:diary' %}"><button id="next">다음상담</button></a>
 
-  <p class="step1">Step 1. 도담이와 대화해주세요!</p>
+  <p class="mention1">Step 1.</p>
+  <p class="mention2">코코몽과 대화해주세요!</p>
 
   <form action="{% url 'dodam_app:record' %}" method="post">
     {% csrf_token %}
