@@ -27,13 +27,13 @@
     <div class="back"></div>
 
     <button id="box1">프로필 사진</button>
-    <button id="box2">사용자ID</button>
-    <button id="box3">비밀번호</button>
-    <button id="box4">비밀번호 재확인</button>
-    <button id="box5">보호자 이름</button>
-    <button id="box6">아이 이름</button>
-    <button id="box7">아이 생년월일</button>
-    <button id="box8">이메일</button>
+    <button id="box2">사용자 이름</button>
+    <button id="box3">보호자 이름</button>
+    <button id="box4">보호자 연락처</button>
+    <button id="box5">비밀번호</button>
+    <button id="box6">비밀번호 재확인</button>
+    <button id="box7">이메일</button>
+    <button id="box8">사용 목적</button>
 
     <!-- <input type="text" name="write2" id="write2">
     <input type="text" name="write3" id="write3">
@@ -49,31 +49,31 @@
         {% csrf_token %}
         <!-- username: -->
         <br>
-        <input name="username" type="text" value="" id="write2" placeholder="    사용자 ID를 입력해주세요."> 
+        <input name="username" type="text" value="" id="write2"> 
         <br>
         <!-- Password: -->
         <br>
-        <input name="password1" type="password1" value="" id="write3" placeholder="    사용자 PASSWORD를 입력해주세요.">
+        <input name="password1" type="password1" value="" id="write5">
         <br>
         <!-- Confirm Password: -->
         <br>
-        <input name="password2" type="password2" value="" id="write4" placeholder="    사용자 PASSWORD를 한번 더 입력해주세요.">
+        <input name="password2" type="password2" value="" id="write6">
         <br>
         <!-- guardian name: -->
         <br>
-        <input name="guardian name" type="text" value="" id="write5" placeholder="    보호자 이름을 입력해주세요.">
+        <input name="guardian name" type="text" value="" id="write3">
         <br>
-        <!-- child name: -->
+        <!-- contact information: -->
         <br>
-        <input name="child name" type="text" value="" id="write6" placeholder="    아이 이름을 입력해주세요.">
-        <br>
-        <!-- birth date: -->
-        <br>
-        <input name="birth date" type="text" value="" id="write7" placeholder="    아이의 생년월일을 입력해주세요. (YYYY-MM-DD)">
+        <input name="contact information" type="text" value="" id="write4">
         <br>
         <!-- email: -->
         <br>
-        <input name="email" type="text" value="" id="write8" placeholder="    보호자의 이메일을 입력해주세요.">
+        <input name="email" type="text" value="" id="write7">
+        <br>
+        <!-- purpose of use: -->
+        <br>
+        <input name="purpose of use" type="text" value="" id="write8">
         <br>
         
         
