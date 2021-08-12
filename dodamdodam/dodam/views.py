@@ -2,8 +2,8 @@ from django.http import request
 from django.shortcuts import redirect, render
 from .models import answer
 
-from .static.stt import main
-from .static.tts import run_quickstart
+# from .static.stt import main
+# from .static.tts import run_quickstart
 
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -93,6 +93,6 @@ def diary(request):
     return render(request, "diary.html")
 
 def record(request):
-    run_quickstart() #TTS
-    main() #STT
+#    run_quickstart() #TTS
+#    main() #STT
     return render(request, "voice.html")

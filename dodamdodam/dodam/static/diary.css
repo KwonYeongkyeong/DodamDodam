@@ -12,36 +12,33 @@ body {
 }
 
 .dragme{
-    position: absolute;
-    width: 30%;
-    height: 40%;
+    position:relative;
+    width: 60px;
+    height: 60px;
     cursor: move;
+    z-index: 2;
 }
-
 .dragmelist {
-    position:absolute;
-    left: 50%;
-    top: 10%;
+    position:relative;
+    z-index: 2;
+    left: 570px;
+    top: 150px;
 }
-
-
 .DS {
     position: absolute;
     left:330px;
     top:430px;
     z-index: 1;
 }
-
 .cocomong {
    position: absolute;
    left: 250px;
    top: 70px;
 }
-
 .text {
-position: absolute;
-left: 400px;
-top: 50px;
+    position: absolute;
+    left: 400px;
+    top: 50px;
 }
 
 #before {
