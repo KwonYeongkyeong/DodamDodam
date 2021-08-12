@@ -17,16 +17,9 @@
 </head>
 
 <body>
-    <!-- <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담">
-    <p id="idbox"></p>
-    <p id="idlet">ID</p>
-    <input type="text" placeholder="  아이디" id="idput">
+    <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담">
+    
 
-    <p id="pwbox"></p>
-    <p id="pwlet">PW</p>
-    <input type="text" placeholder="  비밀번호" id="pwput">
-
-    <a href="{% url 'dodam_app:consult' %}"><input type="submit" value="확인" id="check"></a> -->
     {% if error %}
     {{ error }}
     <br>
@@ -34,16 +27,15 @@
     {% endif %}
     <form method="POST" action="{% url 'dodam_app:login' %}">
         {% csrf_token %}
-        username:
+        <!-- username: -->
+        <input name="username" type="text" value="" id="idbox" placeholder="  사용자이름">
         <br>
-        <input name="username" type="text" value="">
+        <!-- Password: -->
         <br>
-        Password:
-        <br>
-        <input name="password" type="password" value="">
+        <input name="password" type="password" value="" id="pwbox" placeholder="  패스워드">
         <br>
         <br>
-        <input name="button" type="submit" value="login">
+        <input name="button" type="submit" value="login" id="check">
     </form>
     <a href="{% url 'dodam_app:join' %}"><button id="subt">회원가입</button></a>
 </body>
