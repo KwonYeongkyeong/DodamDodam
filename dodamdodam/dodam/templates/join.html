@@ -26,16 +26,16 @@
 
     <div class="back"></div>
 
-    <!-- <button id="box1">프로필 사진</button>
-    <button id="box2">보호자 이름</button>
-    <button id="box3">아이 이름</button>
+    <button id="box1">프로필 사진</button>
+    <button id="box2">사용자 이름</button>
+    <button id="box3">보호자 이름</button>
     <button id="box4">보호자 연락처</button>
-    <button id="box5">주소</button>
-    <button id="box6">이메일</button>
-    <button id="box7">ID</button>
-    <button id="box8">PASSWORD</button>
+    <button id="box5">비밀번호</button>
+    <button id="box6">비밀번호 재확인</button>
+    <button id="box7">이메일</button>
+    <button id="box8">사용 목적</button>
 
-    <input type="text" name="write2" id="write2">
+    <!-- <input type="text" name="write2" id="write2">
     <input type="text" name="write3" id="write3">
     <input type="text" name="write4" id="write4">
     <input type="text" name="write5" id="write5">
@@ -47,19 +47,40 @@
 
     <form method="POST" action="{% url 'dodam_app:join' %}">
         {% csrf_token %}
-        username:
+        <!-- username: -->
         <br>
-        <input name="username" type="text" value="">
+        <input name="username" type="text" value="" id="write2"> 
         <br>
-        Password:
+        <!-- Password: -->
         <br>
-        <input name="password1" type="password1" value="">
+        <input name="password1" type="password1" value="" id="write5">
         <br>
-        Confirm Password:
+        <!-- Confirm Password: -->
         <br>
-        <input name="password2" type="password2" value="">
+        <input name="password2" type="password2" value="" id="write6">
         <br>
-        <input name="button" type="submit" value="signup!">
+        <!-- guardian name: -->
+        <br>
+        <input name="guardian name" type="text" value="" id="write3">
+        <br>
+        <!-- contact information: -->
+        <br>
+        <input name="contact information" type="text" value="" id="write4">
+        <br>
+        <!-- email: -->
+        <br>
+        <input name="email" type="text" value="" id="write7">
+        <br>
+        <!-- purpose of use: -->
+        <br>
+        <input name="purpose of use" type="text" value="" id="write8">
+        <br>
+        
+        
+        <input name="button" type="submit" value="signup!" id="check">
+
+        
+
     </form>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="profile"

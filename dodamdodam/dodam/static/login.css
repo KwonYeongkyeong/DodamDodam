@@ -23,6 +23,7 @@ body {
     background: #E5E5E5;
     border-radius: 0.3vw;
     
+    font-size: 01.2vw;
 }
 
 #pwbox {
@@ -34,9 +35,11 @@ body {
 
     background: #E5E5E5;
     border-radius: 0.3vw;
+
+    font-size: 01.2vw;
 }
 
-#idlet {
+/* #idlet {
 
     position: absolute;
     font-family: SeoulNamsanM;
@@ -85,14 +88,14 @@ body {
     border: none;
     font-family: SeoulNamsanM;
     font-size: 1vw;
-}
+} */
 
 #check {
     position: absolute;
-    width: 5%;
-    height: 13%;
+    width: 7%;
+    height: 15%;
     left: 53%;
-    top: 69%;
+    top: 67%;
 
     background: #6CB896;
     border-radius: 10px;
@@ -101,6 +104,11 @@ body {
     font-weight: bolder;
     font-size: 1.3vw;
     color: white;
+}
+
+#check:hover {
+    color:white;
+    background-color: black;
 }
 
 #subt{
@@ -117,4 +125,14 @@ body {
     border: none;
     font-size: 1.2vw;
     color: #818181;
+
+    background: #E5E5E5;
+    border: 0.2vw solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3vw;
+}
+
+#subt:hover {
+    color:white;
+    background-color: #6CB896;
 }
