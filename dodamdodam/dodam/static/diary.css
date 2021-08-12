@@ -80,7 +80,8 @@ body {
 
 #before {
 
-    
+    all: unset;
+    cursor: pointer;
     position: absolute;
     width: 10%;
     height: 8.5%;
@@ -108,7 +109,8 @@ body {
 
 #next {
 
-   
+    all: unset;
+    cursor: pointer;
     position: absolute;
     width: 10%;
     height: 8.5%;
