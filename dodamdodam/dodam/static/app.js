@@ -72,8 +72,9 @@ function handleCM(event) {
 }
 
 function handleSaveClick() {
-  const imgBase64 = canvas.toDataURL('image/jpeg', 'image/octet-stream');
+  const image = canvas.toDataURL();
   const link = document.createElement("a");
+<<<<<<< HEAD
   const decodImg = atob(imgBase64.split(',')[1]);
 
   let array = [];
@@ -90,6 +91,12 @@ function handleSaveClick() {
   link.download = "PaintJS[🎨]";
   link.click();
 
+=======
+  
+  link.href = image;
+  link.download = "PaintJS[🎨]";
+  link.click();
+>>>>>>> c268f5230de4243718a72c9ba89245f2b617eada
 }
 
 if (canvas) {
