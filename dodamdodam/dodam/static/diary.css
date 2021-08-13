@@ -138,7 +138,7 @@ body {
 }
 
 #shot {
-    all: unset;
+   
     cursor: pointer;
     background-color: white;
     padding: 1vw 0vw;
@@ -148,10 +148,13 @@ body {
     box-shadow: 0 0.6vw 0.3vw rgba(50, 50, 93, 0.11), 0 1vw 3vw rgba(0, 0, 0, 0.08);
     border: 0.2vw solid rgba(0, 0, 0, 0.2);
     color: rgba(0, 0, 0, 0.7);
-    font-weight: 800;
     font-size: 1vw;
 
     position: absolute;
     right: 45%;
-    bottom: 5%;
+    bottom: 3%;
+
+    width: 20%;
+    height: 10%;
+
   }
