@@ -37,7 +37,6 @@ from google.cloud import speech
 import pyaudio
 from six.moves import queue
 
-recorded_answer = ""
 # Audio recording parameters
 STREAMING_LIMIT = 240000  # 4 minutes
 SAMPLE_RATE = 16000
@@ -233,6 +232,7 @@ def listen_print_loop(responses, stream, recorded_answer):
                 sys.stdout.write(YELLOW)
                 sys.stdout.write("Exiting...\n")
                 stream.closed = True
+                return recorded_answer
                 break
 
         else:
@@ -245,6 +245,7 @@ def listen_print_loop(responses, stream, recorded_answer):
 
 def main():
     """start bidirectional streaming from microphone input to speech API"""
+    recorded_answer = ""
 
     client = speech.SpeechClient()
     config = speech.RecognitionConfig(
@@ -284,7 +285,7 @@ def main():
             responses = client.streaming_recognize(streaming_config, requests)
 
             # Now, put the transcription responses to use.
-            listen_print_loop(responses, stream, recorded_answer)
+            recorded_answer = listen_print_loop(responses, stream, recorded_answer)
 
             if stream.result_end_time > 0:
                 stream.final_request_end_time = stream.is_final_end_time
@@ -297,7 +298,11 @@ def main():
             if not stream.last_transcript_was_final:
                 sys.stdout.write("\n")
             stream.new_stream = True
-
+            
+    sys.stdout.write(recorded_answer)
+    recorded_answer = recorded_answer.replace("종료","")
+    recorded_answer = recorded_answer.replace("중단","")
+    return recorded_answer
 
 if __name__ == "__main__":
 

@@ -1,29 +1,33 @@
 from django.http import request
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from .models import answer
 from .models import Picture
 
-# from .static.stt import main
-# from .static.tts import run_quickstart
+from .static.stt import main
+from .static.tts import run_quickstart, play
 
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.utils import timezone
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
 
-def last(request):
-    return render(request, 'last.html')
+def last(request, id):
+    take = get_object_or_404(answer,pk=id)
+    return render(request, 'last.html',{'take':take})
 
 def mypage(request):
     return render(request, 'mypage.html')
 
-def picture(request):
-    return render(request, 'picture.html')
+def picture(request, id):
+    take = get_object_or_404(answer,pk=id)
+    return render(request, 'picture.html', {'take':take})
 
-def voice(request):
-    return render(request, 'voice.html')
+def voice(request,id):
+    take = get_object_or_404(answer,pk=id)
+    return render(request, 'voice.html',{'take':take, 'state':'next'})
 
 def consult(request):
     return render(request, 'consult.html')
@@ -56,47 +60,55 @@ def login(request):
     else:
         return render(request, "login.html")
 
-def result(request):
-    return render(request, "result.html")
+def result(request, id):
+    take = get_object_or_404(answer,pk=id)
+    return render(request, 'result.html', {'take':take})
 
 def setQ(request):
     if(request.method == 'POST'):
         take = answer()
-        if request.POST['ans1'] == 1:
-            take.q1 = request.POST['ans1']
-        else:
-            take.q1 = "오늘은 기분이 어때? 왜 그런 기분이야?"
-        
-        if request.POST['ans2'] == 1:
-            take.q2 = request.POST['ans2']
-        else:
-            take.q2 = "오늘 기뻤던 일은 뭐야?"
-
-        if request.POST['ans3'] == 1:
-            take.q3 = request.POST['ans1']
-        else:
-            take.q3 = "오늘 슬펐던 일은 뭐야?"
-        
-        if request.POST['ans4'] == 1:
-            take.picture = request.POST['ans4']
-        else:
-            take.picture = "집"
-
+        take.pub_date = timezone.datetime.now()
+        take.q1 = "오늘은 기분이 어때? 왜 그런 기분이야?"
+        if request.POST["ans1"]:
+            take.q1 = request.POST["ans1"]
+        take.q2 = "오늘 기뻤던 일은 뭐야?"
+        if request.POST["ans2"]:
+            take.q2 = request.POST["ans2"]
+        take.q3 = "오늘 슬펐던 일은 뭐야?"
+        if request.POST["ans3"]:
+            take.q3 = request.POST["ans3"]
+        take.picture = "집"
+        if request.POST["ans4"]:
+            take.picture = request.POST["ans4"]
+        take.writer = request.user
         take.save()
+    return render(request, "home.html", {'take':take})
 
-    return render(request, "home.html")
-
-def picture(request):
-    take = answer.objects
+def picture(request,id):
+    take = get_object_or_404(answer,pk=id)
     return render(request, 'picture.html', {'take': take})
 
-def diary(request):
-    return render(request, "diary.html")
+def diary(request, id):
+    take = get_object_or_404(answer,pk=id)
+    return render(request, "diary.html", {'take': take})
 
-def record(request):
-#    run_quickstart() #TTS
-#    main() #STT
-    return render(request, "voice.html")
+def record(request,id):
+    take = get_object_or_404(answer,pk=id)
+    run_quickstart(take.q1, take.q2, take.q3) #TTS
+    play("output.mp3",True)
+    take.ans = main() #STT
+    take.save()
+    return render(request, "voice.html",{'take':take})
+
+def nextVoice(request,id):
+    take = get_object_or_404(answer,pk=id)
+    play("output2.mp3",False)
+    return render(request, "voice.html",{'take':take, 'state':'final'})
+
+def finalVoice(request,id):
+    take = get_object_or_404(answer,pk=id)
+    play("output3.mp3",False)
+    return render(request, "voice.html",{'take':take})
 
 def drawing(request):
     draw = Picture()

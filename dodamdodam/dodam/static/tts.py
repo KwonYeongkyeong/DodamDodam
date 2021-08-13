@@ -22,7 +22,7 @@ Example usage:
 """
 
 
-def run_quickstart():
+def run_quickstart(ans,ans2, ans3):
     # [START tts_quickstart]
     """Synthesizes speech from the input string of text or ssml.
 
@@ -31,14 +31,13 @@ def run_quickstart():
     """
     from google.cloud import texttospeech
 
-    #For playing audio
-    from playsound import playsound 
-
     # Instantiates a client
     client = texttospeech.TextToSpeechClient()
 
     # Set the text input to be synthesized
-    synthesis_input = texttospeech.SynthesisInput(text="표정이 안좋아 보여.. 무슨 고민이 있니?")
+    synthesis_input = texttospeech.SynthesisInput(text=ans)
+    synthesis_input2 = texttospeech.SynthesisInput(text=ans2)
+    synthesis_input3 = texttospeech.SynthesisInput(text=ans3)
 
     # Build the voice request, select the language code ("en-US") and the ssml
     # voice gender ("neutral")
@@ -58,16 +57,43 @@ def run_quickstart():
     response = client.synthesize_speech(
         input=synthesis_input, voice=voice, audio_config=audio_config
     )
+    response2 = client.synthesize_speech(
+        input=synthesis_input2, voice=voice, audio_config=audio_config
+    )
+    response3 = client.synthesize_speech(
+        input=synthesis_input3, voice=voice, audio_config=audio_config
+    )
 
     # The response's audio_content is binary.
     with open("output.mp3", "wb") as out:
         # Write the response to the output file.
         out.write(response.audio_content)
         print('Audio content written to file "output.mp3"')
+
+    with open("output2.mp3", "wb") as out:
+        # Write the response to the output file.
+        out.write(response2.audio_content)
+        print('Audio content written to file "output2.mp3"')
+
+    with open("output3.mp3", "wb") as out:
+        # Write the response to the output file.
+        out.write(response3.audio_content)
+        print('Audio content written to file "output3.mp3"')
     # [END tts_quickstart]
 
-    # play audio(output.mp3)
-    playsound("output.mp3")
+def play(file, switch):
+    #For playing audio
+    import pygame
+
+    pygame.mixer.init()
+    pygame.mixer.music.load(file)
+    pygame.mixer.music.play()
+
+    if switch == True:
+        clock = pygame.time.Clock()
+        while pygame.mixer.music.get_busy():
+            clock.tick(30)
+        pygame.mixer.quit()   
 
 
 if __name__ == "__main__":

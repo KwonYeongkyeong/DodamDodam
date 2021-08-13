@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
 
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>도담도담</title>
-    <link rel="stylesheet" href="{%static 'home.css' %}">
-</head>
+    <link rel="stylesheet" href="{%static 'home.css' %}" />
+  </head>
 
-<body>
-    <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담">
-    <a href="{% url 'dodam_app:voice' %}"><img src="{%static '시작하기.png' %}" class="start" alt="시작하기"></a>
-
-</body>
-
+  <body>
+    <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담" />
+    <a href="{% url 'dodam_app:voice' take.id %}"
+      ><img src="{%static '시작하기.png' %}" class="start" alt="시작하기"
+    /></a>
+  </body>
 </html>

@@ -1,65 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static 'diary.css' %}">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'diary.css' %}" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <title>도담도담</title>
-</head>
-<style>
+  </head>
+  <style>
     @font-face {
-    font-family: 'SeoulNamsanM';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-</style>
-<body>
+      font-family: "SeoulNamsanM";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <body>
     <div class="dragmelist">
-        <div id="draggable"></div>
-        <img src="{%static 'sun.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'snow.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'raining.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'windy.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'fastfd.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'ramen.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'pizza.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">
-        <br><br><div id="draggable"></div>
-        <img src="{%static 'smile.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'sad.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'surprised.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'angry.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'chicken.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'block.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'robot.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">
-        <br><br><div id="draggable"></div>
-        <img src="{%static 'friendship (1).png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'friendship.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'family.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'play-with-pet.png' %}"alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'bear.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'cow.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{%static 'horse.png' %}" alt="drag-and-drop image script" title="drag-and-drop image script" class="dragme">
+      <div id="draggable"></div>
+      <img
+        src="{%static 'sun.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'snow.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'raining.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'windy.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'fastfd.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'ramen.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'pizza.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />
+      <br /><br />
+      <div id="draggable"></div>
+      <img
+        src="{%static 'smile.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'sad.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'surprised.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'angry.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'chicken.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'block.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'robot.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />
+      <br /><br />
+      <div id="draggable"></div>
+      <img
+        src="{%static 'friendship (1).png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'friendship.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'family.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'play-with-pet.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'bear.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'cow.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />&nbsp;&nbsp;&nbsp;&nbsp;
+      <img
+        src="{%static 'horse.png' %}"
+        alt="drag-and-drop image script"
+        title="drag-and-drop image script"
+        class="dragme"
+      />
     </div>
     <div>
-        <img src="{%static 'cocomong.png' %}" alt="coco"  class="cocomong">
+      <img src="{%static 'cocomong.png' %}" alt="coco" class="cocomong" />
     </div>
     <div>
-        <!-- <img src="{%static 'text.png' %}" alt="text"  class="text"> -->
-        <p class="mention1">Step 2.</p>
-        <p class="mention2">이모티콘으로 오늘 하루를 표현해주세요!</p>
+      <!-- <img src="{%static 'text.png' %}" alt="text"  class="text"> -->
+      <p class="mention1">Step 2.</p>
+      <p class="mention2">이모티콘으로 오늘 하루를 표현해주세요!</p>
     </div>
-    <a href="{% url 'dodam_app:voice' %}"><button id="before">이전단계</button></a>
-    <a href="{% url 'dodam_app:picture' %}"><button id="next">다음단계</button></a>
+    <a href="{% url 'dodam_app:home' %}"
+      ><button id="before">이전단계</button></a
+    >
+    <a href="{% url 'dodam_app:picture' take.id %}"
+      ><button id="next">다음단계</button></a
+    >
     <div>
-        <img src="{%static 'Dscreen.PNG' %}" alt="Dscreen" class="DS">
+      <img src="{%static 'Dscreen.PNG' %}" alt="Dscreen" class="DS" />
     </div>
 
     <button id="shot">screen shot</button>
     <script src="{%static 'move.js' %}" type="text/javascript"></script>
-</body>
+  </body>
 </html>

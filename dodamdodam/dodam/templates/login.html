@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
 
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>도담도담</title>
-    <link rel="stylesheet" href="{%static 'login.css' %}">
+    <link rel="stylesheet" href="{%static 'login.css' %}" />
     <style>
-        @font-face {
-            font-family: 'SeoulNamsanM';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+      @font-face {
+        font-family: "SeoulNamsanM";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담">
-    
+  <body>
+    <img src="{%static '도담도담.png' %}" class="dodo" alt="도담도담" />
 
-    {% if error %}
-    {{ error }}
-    <br>
-    <br>
-    {% endif %}
+    {% if error %} {{ error }} {% endif %}
     <form method="POST" action="{% url 'dodam_app:login' %}">
-        {% csrf_token %}
-        <!-- username: -->
-        <input name="username" type="text" value="" id="idbox" placeholder="    아이디">
-        <br>
-        <!-- Password: -->
-        <br>
-        <input name="password" type="password" value="" id="pwbox" placeholder="    패스워드">
-        <br>
-        <br>
-        <input name="button" type="submit" value="login" id="check">
+      {% csrf_token %}
+      <!-- username: -->
+      <input
+        name="username"
+        type="text"
+        value=""
+        id="idbox"
+        placeholder="    아이디"
+      />
+      <br />
+      <!-- Password: -->
+      <br />
+      <input
+        name="password"
+        type="password"
+        value=""
+        id="pwbox"
+        placeholder="    패스워드"
+      />
+      <br />
+      <br />
+      <input name="button" type="submit" value="login" id="check" />
     </form>
     <a href="{% url 'dodam_app:join' %}"><button id="subt">회원가입</button></a>
-</body>
-
+  </body>
 </html>
