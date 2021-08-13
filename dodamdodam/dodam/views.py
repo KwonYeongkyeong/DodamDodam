@@ -3,8 +3,8 @@ from django.shortcuts import redirect, render, get_object_or_404
 from .models import answer
 from .models import Picture
 
-from .static.stt import main
-from .static.tts import run_quickstart, play
+# from .static.stt import main
+# from .static.tts import run_quickstart, play
 
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -94,20 +94,20 @@ def diary(request, id):
 
 def record(request,id):
     take = get_object_or_404(answer,pk=id)
-    run_quickstart(take.q1, take.q2, take.q3) #TTS
-    play("output.mp3",True)
-    take.ans = main() #STT
+    # run_quickstart(take.q1, take.q2, take.q3) #TTS
+    # play("output.mp3",True)
+    # take.ans = main() #STT
     take.save()
     return render(request, "voice.html",{'take':take})
 
 def nextVoice(request,id):
     take = get_object_or_404(answer,pk=id)
-    play("output2.mp3",False)
+    # play("output2.mp3",False)
     return render(request, "voice.html",{'take':take, 'state':'final'})
 
 def finalVoice(request,id):
     take = get_object_or_404(answer,pk=id)
-    play("output3.mp3",False)
+    # play("output3.mp3",False)
     return render(request, "voice.html",{'take':take})
 
 def drawing(request):
