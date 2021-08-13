@@ -55,10 +55,10 @@ def login(request):
             return redirect("/dodam/consult/")
         else:
             return render(
-                request, "login.html", {"error": "username or password is incorrect"}
+                request, "index.html", {"error": "username or password is incorrect"}
             )
     else:
-        return render(request, "login.html")
+        return render(request, "index.html")
 
 def result(request, id):
     take = get_object_or_404(answer,pk=id)
