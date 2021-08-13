@@ -1,6 +1,7 @@
 from django.http import request
 from django.shortcuts import redirect, render
 from .models import answer
+from .models import Picture
 
 # from .static.stt import main
 # from .static.tts import run_quickstart
@@ -96,3 +97,9 @@ def record(request):
 #    run_quickstart() #TTS
 #    main() #STT
     return render(request, "voice.html")
+
+def drawing(request):
+    draw = Picture()
+    draw.draw = request.POST['image']
+    draw.save()
+    return redirect("/dodam/result/")

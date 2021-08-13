@@ -115,6 +115,9 @@ body {
 }
 
 #before {
+
+  all: unset;
+  cursor: pointer;
   position: absolute;
   width: 10%;
   height: 8.5%;
@@ -122,16 +125,17 @@ body {
   top: 80%;
   
   background-color: rgba(239, 106, 106, 0.96);
-  box-shadow: 0.0000vw 0.2778vw 0.2778vw rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0vw 1.5vw 1.5vw 0vw;
+
 
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: bold;
   font-size: 1vw;
   text-align: center;
-
-  color: #FFFFFF
+  
+  color: #FFFFFF;
 }
 
 #before:hover {
@@ -140,23 +144,29 @@ body {
   
 
 #next {
-  position: absolute; 
+
+  all: unset;
+  cursor: pointer;
+  position: absolute;
   width: 10%;
   height: 8.5%;
   right: 0%;
   top: 80%;
  
-  background-color: #2fd98e;
-  box-shadow: 0.0000vw 0.2778vw 0.2778vw rgba(0, 0, 0, 0.25);
+  background-color: #2FD98E;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 1.5vw 0vw 0vw 1.5vw;
-  
+
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: bold;
   font-size: 1vw;
   text-align: center;
+  
+ 
+ color: #FFFFFF;
 
-  color: #FFFFFF
+
 } 
 
 #next:hover{

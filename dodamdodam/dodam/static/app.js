@@ -72,11 +72,36 @@ function handleCM(event) {
 }
 
 function handleSaveClick() {
-  const image = canvas.toDataURL();
+  const imgBase64 = canvas.toDataURL('image/jpeg', 'image/octet-stream');
   const link = document.createElement("a");
-  link.href = image;
+  const decodImg = atob(imgBase64.split(',')[1]);
+
+  link.href = imgBase64;
   link.download = "PaintJS[🎨]";
   link.click();
+
+
+  let array = [];
+  for (let i = 0; i < decodImg .length; i++) {
+    array.push(decodImg .charCodeAt(i));
+  }
+
+  const file = new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
+  const fileName = 'canvas_img_' + new Date().getMilliseconds() + '.jpg';
+  let formData = new FormData();
+  formData.append('file', file, fileName);
+
+  $.ajax({
+    type: 'post',
+    url: '/media/',
+    cache: false,
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (data) {
+      alert('Uploaded !!')
+    }
+  })
 }
 
 if (canvas) {
@@ -102,4 +127,5 @@ if (mode) {
 
 if (saveBtn) {
   saveBtn.addEventListener("click", handleSaveClick);
+
 }

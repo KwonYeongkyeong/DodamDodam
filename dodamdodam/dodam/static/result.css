@@ -57,6 +57,8 @@ body {
 }
 
 #home {
+    all: unset;
+    cursor: pointer;
     position: absolute;
     width: 8%;
     height: 7%;
@@ -67,6 +69,7 @@ body {
     color: white;
     border: none;
     border-radius: 50px;
+    border: 0.2vw solid rgba(0, 0, 0, 0.2);
 
     font-family: SeoulNamsanM;
     font-style: normal;
@@ -76,6 +79,8 @@ body {
 }
 
 #mypage {
+    all: unset;
+    cursor: pointer;
     position: absolute;
     width: 8%;
     height: 7%;
@@ -86,6 +91,7 @@ body {
     color: white;
     border: none;
     border-radius: 50px;
+    border: 0.2vw solid rgba(0, 0, 0, 0.2);
 
     font-family: SeoulNamsanM;
     font-style: normal;
