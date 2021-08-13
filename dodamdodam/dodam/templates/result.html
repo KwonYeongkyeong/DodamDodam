@@ -22,7 +22,9 @@
     <a href="{% url 'dodam_app:mypage' %}"><button id="mypage">MyPage</button></a>
     <div id="talk"></div>
     <div id="diary"></div>
-    <div id="picture"></div>
+    <div id="picture">
+        <img src={post.picture.url} style="width:100px; height:100px">
+    </div>
 </body>
 
 </html>

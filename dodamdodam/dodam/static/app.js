@@ -76,11 +76,6 @@ function handleSaveClick() {
   const link = document.createElement("a");
   const decodImg = atob(imgBase64.split(',')[1]);
 
-  link.href = imgBase64;
-  link.download = "PaintJS[🎨]";
-  link.click();
-
-
   let array = [];
   for (let i = 0; i < decodImg .length; i++) {
     array.push(decodImg .charCodeAt(i));
@@ -91,17 +86,10 @@ function handleSaveClick() {
   let formData = new FormData();
   formData.append('file', file, fileName);
 
-  $.ajax({
-    type: 'post',
-    url: '/media/',
-    cache: false,
-    data: formData,
-    processData: false,
-    contentType: false,
-    success: function (data) {
-      alert('Uploaded !!')
-    }
-  })
+  link.href = imgBase64;
+  link.download = "PaintJS[🎨]";
+  link.click();
+
 }
 
 if (canvas) {

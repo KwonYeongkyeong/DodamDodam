@@ -136,3 +136,9 @@ body {
 #next:hover{
     background-color: #18744c;
 }
+
+#shot {
+    position: absolute;
+    left: 800px;
+    top: 680px;
+}
